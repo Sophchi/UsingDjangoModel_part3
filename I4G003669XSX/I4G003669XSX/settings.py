@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # applications created by me.
     'links',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +53,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'I4G003669XSX.urls'
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
 
 TEMPLATES = [
     {
